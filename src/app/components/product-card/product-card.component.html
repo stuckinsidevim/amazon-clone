@@ -1,0 +1,53 @@
+<div class="product-card">
+  <div class="product-card-header">
+    <div class="best-seller-tag" *ngIf="product.bestseller">Best seller</div>
+    <img src="{{ product.imageUrl }}" alt="Do It Today" class="product-image" />
+  </div>
+  <div class="product-card-body">
+    <h2 class="product-title">
+      <a>{{ product.title }}</a>
+    </h2>
+    <div class="author">
+      <a>{{ product.author }}</a> |
+      <span class="date">{{ product.publishedDate }}</span>
+    </div>
+    <div class="rating">
+      {{ product.stars | starRating }}
+      <span
+        ><img
+          class="review-dropdown"
+          src="https://www.veryicon.com/download/png/miscellaneous/massager/drop-down-arrow-3?s=256" /></span
+      ><a class="review-numbers">{{ product.reviewCount.toString() }}</a>
+    </div>
+    <div class="pricing">
+      <div class="price rupee">
+        {{ product.price }}
+        <span class="original-price rupee">{{ product.actualPrice }}</span>
+      </div>
+      <div class="delivery">
+        FREE delivery Thu, 1 Feb on
+        <span class="rupee">199</span> of items fulfilled by Amazon
+      </div>
+      <a class="fastest-delivery">Or fastest delivery Tomorrow by 11 am</a>
+    </div>
+    <div class="buying-options">
+      <div class="more-options"><a>More Buying Choices</a></div>
+      <div class="price-options">
+        <span class="rupee"></span> (11 new offers)
+      </div>
+    </div>
+    <div class="kindle" *ngIf="product.ebookPrice != undefined">
+      <div class="kindle-title"><a>Kindle Edition</a></div>
+      <div class="kindle-price rupee">{{ product.ebookPrice }}</div>
+      <span class="small-text"> Available Instantly </span>
+    </div>
+    <div class="audible" *ngIf="product.audiobookPrice != undefined">
+      <div class="audible-title"><a>Audible Audiobook</a></div>
+      <div class="audible-price rupee">{{ product.audiobookPrice }}</div>
+      <span class="small-text">
+        Free with Audible trial<br />
+        Available Instantly
+      </span>
+    </div>
+  </div>
+</div>

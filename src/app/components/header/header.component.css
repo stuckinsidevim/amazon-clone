@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #131921;
+  color: white;
+  padding: 10px;
+
+  a:hover,
+  .logo:hover {
+    outline: 2px solid white;
+  }
+
+  .logo {
+    img {
+      width: 100px;
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 20px;
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+    }
+
+    button {
+      padding: 8px;
+      background-color: #febd69;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .nav-links {
+    a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+  }
+}
