@@ -9,6 +9,11 @@
   font-size: calc(12px + (2vw + 20%) / 10);
 }
 
+.product-card a {
+  cursor: pointer;
+  color: #007185;
+}
+
 .product-card-header {
   position: relative;
   text-align: center;
@@ -42,9 +47,11 @@
 .product-title {
   font-size: 2em;
   font-weight: 500;
-  color: #333;
   margin-bottom: 5px;
   min-width: 32ch;
+}
+.product-title a {
+  color: #333;
 }
 
 .author {
@@ -145,10 +152,6 @@
   }
 }
 
-.product-card a {
-  cursor: pointer;
-}
-
 .product-card a:hover {
   color: #e67a00;
 }
@@ -159,4 +162,27 @@
 
 .date {
   font-weight: 300;
+}
+
+.summary {
+  text-align: left;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.05em;
+  }
+
+  a {
+    font-size: 0.9em;
+    color: #0066c0;
+  }
+  .read-less {
+    margin-top: 10px;
+    display: inline-block;
+  }
 }

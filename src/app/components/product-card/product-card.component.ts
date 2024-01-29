@@ -9,4 +9,9 @@ import { Product } from "src/app/models/product.model";
 export class ProductCardComponent {
   @Input()
   product!: Product;
+  showSummary = false;
+  toggleSummary(event: Event): void {
+    event.preventDefault();
+    this.showSummary = !this.showSummary;
+  }
 }

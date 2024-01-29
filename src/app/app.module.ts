@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { StarRatingPipe } from './star-rating.pipe';
+import { OnlyNumberDirective } from './only-number.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StarRatingPipe } from './star-rating.pipe';
     HeaderComponent,
     ProductCardComponent,
     ProductListComponent,
-    StarRatingPipe
+    StarRatingPipe,
+    OnlyNumberDirective
   ],
   imports: [
     BrowserModule,

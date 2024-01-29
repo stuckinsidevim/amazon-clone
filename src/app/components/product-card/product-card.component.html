@@ -49,5 +49,15 @@
         Available Instantly
       </span>
     </div>
+
+    <!-- Read More/Read Less Toggle -->
+    <div *ngIf="showSummary" class="summary">
+      <h3>Summary</h3>
+      <p [innerHtml]="product.summary"></p>
+      <a href="#" class="read-less" (click)="toggleSummary($event)">Read less</a>
+    </div>
+    <a href="#" *ngIf="!showSummary" (click)="toggleSummary($event)"
+      >Summary &gt;</a
+    >
   </div>
 </div>
